@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t prashanth1261/DockerReact -f dockerfile.dev .
+  - docker build -t prashanth1261/dockerreact -f dockerfile.dev .
 
 script:
-  - docker run prashanth1261/DockerReact npm run test -- --coverage
+  - docker run prashanth1261/dockerreact npm run test -- --coverage
