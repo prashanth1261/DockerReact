@@ -1,0 +1,10 @@
+sudo: required
+
+services: 
+  - docker
+
+before-install:
+  - docker build -t prashanth1261/DockerReact -f dockerfile.dev .
+
+script:
+  - docker run prashanth1261/DockerReact npm run test -- --coverage
